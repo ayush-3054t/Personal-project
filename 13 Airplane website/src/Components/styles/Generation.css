@@ -1,0 +1,52 @@
+.generation-container {
+  position: relative;
+  margin-top: 1rem;
+  background-color: #2b2d39;
+  margin-left: 20rem;
+  margin-right: 3rem;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.generation-heading {
+  margin-left: 2rem;
+  color: #525172;
+}
+
+.generation-button-container {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.generation-button-container button {
+  border: none;
+  background-color: #3f353e;
+  outline: none;
+  color: #a17c76;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-content h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: small;
+  width: 20rem;
+}
+
+.gen-button:hover {
+  scale: 110%;
+  background-color: #a17c76;
+  color: #3f353e;
+}

@@ -1,0 +1,22 @@
+.navigation-container{
+    margin-left:5%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    z-index:+22;
+    border-bottom: 1px solid #808088;
+    
+}
+
+.navigation-container input{
+    padding:1rem;
+    width: 40rem;
+    outline: none;
+    border: none;
+    background-color: #2b2d39;
+    border-radius: 6px;
+    color: white;
+}
+

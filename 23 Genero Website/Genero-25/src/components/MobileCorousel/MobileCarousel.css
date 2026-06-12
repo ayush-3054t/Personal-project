@@ -1,0 +1,118 @@
+/* Base styles for mobile only */
+.mobile-only-view {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: black;
+  background-blend-mode: overlay;
+  color: #FFFFF0; /* Ivory text */
+}
+
+.bg-container {
+  width: 100%;
+  min-height: 80px; /* Reduced to save space */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header-text {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem; /* Slightly smaller for mobile */
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.carousel-container {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top to prevent clipping */
+  padding: 10px 0;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow scrolling if needed */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 90vw; /* Scales with device width */
+  max-width: 400px; /* Slightly larger for larger mobile screens */
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden; /* Dark purple tint */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 0 6px rgba(255, 215, 0, 0.2); */
+  
+ 
+  opacity: 0;
+  transform: translateY(50px);
+  will-change: opacity, transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item.animate-in {
+  animation: crazySlideBounce 0.4s ease-out forwards;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.4);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 20vh; /* Scales with viewport height */
+  min-height: 120px; /* Minimum for smaller screens */
+  max-height: 200px; /* Maximum for larger mobile screens */
+  object-fit: contain; /* Full image visibility */
+  display: block;
+  border-radius: 4px;
+}
+
+
+
+
+.event-number {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem; /* Slightly larger for larger cards */
+  font-weight: 500;
+  text-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
+}
+
+@keyframes crazySlideBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateY(0) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-only-view {
+    display: none;
+  }
+}

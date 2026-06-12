@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;   
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f1f1f1;
+}
+
+.container{
+    width: 510px;
+    height: 510px;
+    background: #08090e;
+    border-radius: 25px;
+    border: 5px solid #6a6d74;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.container .clock{
+    width: 420px ;
+    height: 420px;
+    border-radius:50%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock .number_hours{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.number_hours span{
+    position: absolute;
+    transform: rotate(calc(var(--index) * 30deg));
+    color: white;
+    inset: 6px;
+    text-align: center;
+}
+
+.number_hours span p{
+    font-size: 52px;
+    transform: rotate(calc(var(--index) * -30deg));
+}
+
+.seconds_bar span{
+    position: absolute;
+
+    transform: rotate(calc(var(--index) * 6deg));
+    inset: -20px;
+    text-align: center;
+
+
+}
+
+.seconds_bar span p{
+    width: 3px;
+    height: 12px;
+    background: #4a4d53;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.clock .seconds_bar span:nth-child(5n) p{
+    background-color: white;
+    width: 5px;
+    height: 18px;
+    transform: translateY(1px);
+}
+
+.hands_box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hands_box .hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+/* this is the seconds section */
+
+.hands_box .second{
+    width: 420px;
+    height: 420px;
+
+}
+
+.hands_box .second i{
+    width: 4px;
+    height: calc(210px + 50px);
+    background-color: #d5b617;
+    position: relative;   
+}
+
+.hands_box .second::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: #d5b617;
+    border-radius:50% ;
+}
+
+.hands_box .second::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #08090e;
+}
+
+.hands_box .second i::before{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 10px;
+    height: 35px;
+    background: #d5b617;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius:5px ;
+}
+
+
+
+
+/* this is the minute section */
+
+.hands_box .minute{
+    width: 380px;
+    height: 380px;
+}
+
+.hands_box .minute::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.hands_box .minute i{
+    width: 7px;
+    height: calc(190px);
+    background-color: #fff;
+    position: absolute;   
+}
+
+.hands_box .minute i::after{
+    content: "";
+    width: 13px;
+    height: 170px;
+    position: absolute;
+    background: #fff;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+}
+
+
+
+/* this is the hours section */
+
+.hands_box .hour{
+    width: 280px;
+    height: 280px;
+}
+
+.hands_box .hour i{
+    width: 7px;
+    height: calc(140px);
+    background-color: #fff;
+    position: absolute;   
+}
+
+.hands_box .hour i::after{
+    content: "";
+    position: absolute;
+    height: 115px;
+    width: 13px;
+    background-color: #fff;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+
+}
+

@@ -1,0 +1,177 @@
+* {
+  cursor: none !important;
+}
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@font-face {
+  font-family: 'CustomFont';  
+  /* Replace with your font name */
+  src: url('/fonts/Stencilum-ExtraLoose.ttf') format('truetype'),
+       url('/fonts/Stencilum-Loose.ttf') format('truetype'),
+       url('/fonts/Stencilum-Regular.ttf') format('truetype'),
+       url('/fonts/Stencilum-UltraLoose.ttf') format('truetype'),
+       url('/fonts/Stencilum-VF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MedievalSharp';
+  src: url('/fonts/MedievalSharp.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: black;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'CustomFont', sans-serif;
+  /* font-family: 'RansiteMedieval', serif; */
+ /* overflow-x: hidden; */
+ width: 100vw;
+}
+
+:root {
+  --background: #0e1116;
+  --white: #ffffff;
+  --accent: #1bf8c7;
+  --gray: #818a91;
+  --green: #1bf8c7;
+  --font-primary: "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: var(--white);
+  height: 100vh;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+#root {
+  cursor: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'MedievalSharp', cursive;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 1.5px solid var(--color-amber-400);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trail-segment {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(
+    circle,
+    rgba(133, 120, 46, 0.5) 0%,
+    rgba(244, 212, 33, 0) 80%
+  );
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
+
+/* Display Section Styling */
+
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000; /* Black background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFD700, #4B0082, #000);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFC300, #6A0DAD, #000);
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

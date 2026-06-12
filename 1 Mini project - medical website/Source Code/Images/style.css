@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {}
+
+.main {
+    width: 100%;
+    height: 85vh;
+    background-image: url('Images/Background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: relative;
+    background-position: center;
+    background-attachment: fixed ;
+
+}
+
+nav>:nth-child(1) {
+    width: 100%;
+    height: 52px;
+    background-color: #0077B6;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 700;
+    gap: 1400px;
+}
+
+nav>:nth-child(1) p {
+    display: flex;
+    align-items: center;
+}
+
+nav>:nth-child(2) {
+    width: 100%;
+    height: 71px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1000px;
+}
+
+.logo img {
+    width: 108px;
+}
+
+.right ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+}
+
+.welcome {
+    width: 790px;
+    height: 454px;
+    position: relative;
+    left: 64px;
+    top: 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.welcome>:first-child {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    /* opacity: 0.7; */
+    border-radius: 20px;
+}
+
+.welcome>:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.welcome>:nth-child(2) h1 {
+    position: relative;
+    z-index: 10;
+    opacity: 0.9;
+    font-size: 45px;
+    font-family: "Inter", serif;
+    font-weight: bold;
+    /* top: 59px; */
+    left: 74px;
+
+}
+
+.welcome>:nth-child(2) p {
+    position: relative;
+    /* top: 100px; */
+    left: 72px;
+    width: 630px;
+    font-family: "Inter";
+    font-size: 24px;
+}
+
+.button {
+    width: 195px;
+    height: 60px;
+    background-color: #0077B6;
+    color: white;
+    font-size: 25px;
+    border-radius: 60px;
+    border: none;
+}
+
+.welcome>:nth-child(2) button {
+    position: relative;
+    left: 72px;
+    /* top: 158px; */
+}
+
+.main2 {
+    width: 100%;
+    height: 350px;
+    /* background-color: #34C2BB; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    margin-top: -90px;
+
+}
+
+.main2 div {
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    /* border-radius: 64px; */
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    background-color: #03a9f5;
+
+}
+
+.main2 div h1 {
+    font-family: "Inter";
+    font-size: 45px;
+    font-weight: semi-bold;
+    position: relative;
+    left: 34px;
+    width: 214px;
+}
+
+.main2 div p {
+    font-size: 22px;
+    width: 300px;
+    position: relative;
+    left: 34px;
+}
+
+.main2 div button {
+    width: 177px;
+    height: 54px;
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+.achivement {
+    height: 794px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 76px;
+    margin-left: 134px;
+    display: flex;
+    position: relative;
+
+}
+
+.achivement .left {
+    width: 1138px;
+}
+
+.achivement .left h1 {
+    font-size: 41px;
+}
+
+.achivement .left p {
+    font-size: 18px;
+    margin-top: 14px;
+    font-size: 25px;
+    margin-bottom: 28px;
+}
+
+.achivement .left>:nth-child(3) {
+    display: flex;
+    gap: 54px;
+}
+
+.achivement .left>:nth-child(3) img {
+    width: 400px;
+    height: 250px;
+}
+
+.question {
+    width: 446px;
+    height: 621px;
+    background-color: #0077B6;
+    color: white;
+    border-radius: 45px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    position: relative;
+    left: 134px;
+
+}
+
+.question h1 {
+    position: relative;
+    left: 38px;
+    margin-bottom: 24px;
+    margin-top: 39px;
+}
+
+.question .input {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+    left: 38px;
+    margin-bottom: 20px;
+}
+
+.question .input label {
+    font-size: 21px;
+    font-weight: bold;
+
+}
+
+.question .input input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 2px solid white;
+    width: 368px;
+    height: 39px;
+}
+
+.question>:nth-child(4) {
+    margin-top: 21px;
+}
+
+.question>:nth-child(4) input {
+    border: 2px solid white;
+    height: 146px;
+}
+
+.question button {
+    width: 177px;
+    height: 54px;
+    font-size: 22px;
+    margin: 0 auto;
+    background-color: black;
+    margin-top: 34px;
+}
+
+.data {
+    width: 100%;
+    height: 456px;
+    background-color: #34C2BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 140px;
+}
+
+.data .stats {
+    width: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    color: white;
+}
+
+.data .stats h1 {
+    font-size: 85px;
+    font-weight: bold;
+}
+
+.data .stats .line {
+    width: 234px;
+    height: 7px;
+    background-color: white;
+}
+
+.data .stats p {
+    font-size: 34px;
+}
+
+.pictures {
+    position: relative;
+    height: 1021px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.pictures h1 {
+    font-size: 60px;
+    font-weight: bold;
+    /* position: relative; */
+    top: 76px;
+    left: 111px;
+}
+
+.pictures .grid {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pictures .grid .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.pictures .grid img {
+    width: 510px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.pictures .button {
+    width: 177px;
+    height: 54px;
+    font-size: 22px;
+    margin: 0 auto;
+    background-color: #0077B6;
+
+}

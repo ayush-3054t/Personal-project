@@ -1,0 +1,41 @@
+.main{
+  z-index: 1;
+}
+  
+.container {
+  position: relative;
+  height: 200vh;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* background: url("/PastEventsBg2.png") center / cover no-repeat; */
+    opacity: 0.4; 
+    z-index: -1; 
+  }
+}
+
+  
+  .stickyMask{
+    display: flex;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    mask-image: url('/media/mask1.svg');
+    mask-position: 63% 37%;
+    mask-repeat: no-repeat;
+    mask-size: 80%;
+  }
+  
+  .stickyMask video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  

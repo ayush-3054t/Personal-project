@@ -1,0 +1,2 @@
+express-async-handler is used to avoid using multiple try catch blocks during the mongoosse CURD operations
+

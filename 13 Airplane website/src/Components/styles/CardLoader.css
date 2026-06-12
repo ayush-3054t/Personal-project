@@ -1,0 +1,41 @@
+.cardloader-container {
+    min-height: 100vh;
+    margin-left: 18rem;
+}
+
+.all-cards {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.card {
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #2b2d39;
+
+}
+.card:hover{
+    scale:105%;
+}
+
+.card img {
+    object-fit: cover;
+    width: 20rem;
+    height: 12rem;
+    border-radius: 6px;
+}
+
+.input-conatainer {
+    background-color: #2b2d39;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon{
+    margin-left: 1rem;
+}

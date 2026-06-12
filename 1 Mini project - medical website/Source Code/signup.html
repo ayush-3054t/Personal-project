@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Sign Up Container */
+.signup-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 550px;  /* Increased width from 450px to 550px */
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    font-size: 24px;
+    color: #00aded;
+    margin-bottom: 30px;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #00aded;
+}
+
+/* Styling for Name Fields */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group input {
+    width: 32%;
+}
+
+.input-group input:first-child {
+    margin-right: 5%;
+}
+
+.input-group input:last-child {
+    margin-left: 5%;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00aded;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #009bbf;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="#" method="post">
+
+            <div class="input-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+            </div>
+
+            <div class="input-group">
+                <label for="middle-name">Middle Name</label>
+                <input type="text" id="middle-name" name="middle-name" placeholder="Enter your middle name">
+            </div>
+
+            <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+            </div>
+
+            <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="input-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number"
+                    pattern="[0-9]{10}">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
